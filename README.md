@@ -12,15 +12,25 @@ Working solvers CPU_TROMP, CPU_XENONCAT, CUDA_TROMP, OCL_XMP, OCL_SILENTARMY
 
 ## Linux (Ubuntu 14.04 / 16.04) Build CPU_XENONCAT:
 
- - Open terminal and run the following commands:
-   - `sudo apt-get install cmake build-essential libboost-all-dev`
-   - `git clone -b Linux https://github.com/nicehash/nheqminer.git`
-   - `cd nheqminer/cpu_xenoncat/Linux/asm/`
-   - `sh assemble.sh`
-   - `cd ../../../Linux_cmake/nheqminer_cpu`
-   - `cmake .`
-   - `make -j $(nproc)`
+ - Open terminal and run the following script:
+   
+```bash
 
+#!/bin/bash
+#
+git clone -b Linux https://github.com/nicehash/nheqminer.git
+cd ./nheqminer && git pull && cd ../
+#
+cd nheqminer/cpu_xenoncat/Linux/asm/
+sh assemble.sh
+cd ../../../Linux_cmake/nheqminer_cpu
+cmake .
+make -j $(nproc)
+#
+exit 0
+
+```
+ 
 ## Linux (Ubuntu 14.04 / 16.04) Build CUDA_TROMP:
 
  - Open terminal and run the following commands:
