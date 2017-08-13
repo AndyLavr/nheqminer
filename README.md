@@ -3,19 +3,6 @@
 ### Dependencies:
   - Boost 1.54+
 
-## Windows:
-
-Windows builds made by us are available here: https://github.com/nicehash/nheqminer/releases
-
-Download and install:
-- [AMD APP SDK](http://developer.amd.com/tools-and-sdks/opencl-zone/amd-accelerated-parallel-processing-app-sdk/) (if not needed remove **USE_OCL_XMP** from **nheqminer** Preprocessor definitions under Properties > C/C++ > Preprocessor)
-- [CUDA SDK](https://developer.nvidia.com/cuda-downloads) (if not needed remove **USE_CUDA_TROMP** from **nheqminer** Preprocessor definitions under Properties > C/C++ > Preprocessor)
-- Visual Studio 2013 Community: https://www.visualstudio.com/en-us/news/releasenotes/vs2013-community-vs
-- Visual Studio Update 5 installed
-- 64 bit version only
-
-Open **nheqminer.sln** under **nheqminer/nheqminer.sln** and build. You will have to build ReleaseSSE2 cpu_tromp project first, then Release7.5 cuda_tromp project, then select Release and build all.
-
 
 ## Linux
 
